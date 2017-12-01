@@ -1,9 +1,10 @@
 package com.apress.prospring4.ch3.annotation;
 
-import org.springframework.stereotype.Service;
-import com.apress.prospring4.ch3.MessageRenderer;
 import com.apress.prospring4.ch3.MessageProvider;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.apress.prospring4.ch3.MessageRenderer;
+import org.springframework.stereotype.Service;
+
+import javax.inject.Inject;
 
 @Service("messageRenderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
@@ -21,7 +22,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
     }
 
     @Override
-    @Autowired
+    @Inject
     public void setMessageProvider(MessageProvider provider) {
         this.messageProvider = provider;
     }
