@@ -6,14 +6,12 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="messageProvider" 
-        class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider"
-        c:message="This is a configurable message"/>
+    <bean id="messageProvider" class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider"
+          c:message="This is a configurable message"/>
 
-    <bean id="constructorConfusion"
-        class="com.apress.prospring4.ch3.xml.ConstructorConfusion"> 
+    <bean id="constructorConfusion" class="com.apress.prospring4.ch3.xml.ConstructorConfusion">
         <constructor-arg type="int">
-            <value>90</value> 
+            <value>90</value>
         </constructor-arg> 
     </bean>
 </beans>

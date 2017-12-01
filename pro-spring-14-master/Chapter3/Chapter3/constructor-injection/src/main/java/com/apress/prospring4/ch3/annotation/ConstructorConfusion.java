@@ -21,9 +21,7 @@ public class ConstructorConfusion {
    }
 
     public static void main(String[] args) {
-        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:META-INF/spring/app-context-annotation.xml");
-        ctx.refresh();
+        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:META-INF/spring/app-context-annotation.xml");
 
         ConstructorConfusion cc = (ConstructorConfusion) ctx.getBean("constructorConfusion");
         System.out.println(cc); 
